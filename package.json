@@ -1,0 +1,73 @@
+{
+  "name": "easy-claude",
+  "version": "1.0.0",
+  "description": "易用的Claude桌面配置工具",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "electron .",
+    "dev": "tsc && electron .",
+    "package": "electron-builder build --win --publish never",
+    "package-mac": "electron-builder build --mac --publish never",
+    "package-linux": "electron-builder build --linux --publish never"
+  },
+  "build": {
+    "appId": "com.easy-claude",
+    "productName": "Easy Claude",
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "index.html",
+      "renderer/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ]
+    }
+  },
+  "keywords": [
+    "claude",
+    "electron",
+    "ai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "@types/react": "^18.2.57",
+    "@types/react-dom": "^18.2.19",
+    "canvas": "^3.1.2",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^29.0.1",
+    "electron-builder": "^24.13.3",
+    "electron-icon-builder": "^2.0.1",
+    "jimp": "^1.6.0",
+    "sharp": "^0.34.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "electron-is-dev": "^2.0.0",
+    "electron-store": "^8.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "semver": "^7.7.2"
+  }
+}
