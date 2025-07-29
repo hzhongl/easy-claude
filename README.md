@@ -45,6 +45,12 @@ npm start
 - TypeScript
 - HTML/CSS/JavaScript
 
+## 截图
+
+<img width="1096" height="849" alt="image" src="https://github.com/user-attachments/assets/56b8a0f2-858f-4b01-9cc1-79c01aa774de" />
+
+<img width="1100" height="858" alt="image" src="https://github.com/user-attachments/assets/b2240002-55d3-4a02-a5c0-134b19cc4963" />
+
 ## 许可证
 
 MIT 
