@@ -22,7 +22,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/你的用户名/easy-claude.git
+git clone https://github.com/hzhongl/easy-claude.git
 cd easy-claude
 
 # 安装依赖
