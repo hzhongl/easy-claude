@@ -1071,6 +1071,384 @@
         background-position: 200% 0%;
       }
     }
+    
+    /* Router页面样式 */
+    .router-status-card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .router-status-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    
+    .router-status-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .router-status-title h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    
+    .status-badge {
+      padding: 0.35rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    
+    .status-badge.not-installed {
+      background-color: #e5e7eb;
+      color: #4b5563;
+    }
+    
+    .status-badge.running {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+    
+    .status-badge.stopped {
+      background-color: #fee2e2;
+      color: #b91c1c;
+    }
+    
+    .icon-button {
+      background: none;
+      border: none;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color var(--transition-fast);
+    }
+    
+    .icon-button:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    .router-description {
+      margin-bottom: 1.25rem;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+    .primary-button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+    }
+    
+    .primary-button:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .primary-button:disabled {
+      background-color: #d1d5db;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    
+    .success-button {
+      background-color: #10b981;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+    }
+    
+    .success-button:hover {
+      background-color: #059669;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .success-button:disabled {
+      background-color: #d1d5db;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    
+    .danger-button {
+      background-color: #ef4444;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+    }
+    
+    .danger-button:hover {
+      background-color: #dc2626;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .danger-button:disabled {
+      background-color: #d1d5db;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    
+    .secondary-button {
+      background-color: #f3f4f6;
+      color: var(--text-color);
+      border: 1px solid #e5e7eb;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+    }
+    
+    .secondary-button:hover {
+      background-color: #e5e7eb;
+      transform: translateY(-2px);
+    }
+    
+    .router-controls {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    
+    .progress-container {
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+    
+    .progress-status {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+    }
+    
+    .progress-bar {
+      width: 100%;
+      height: 0.5rem;
+      background-color: #e5e7eb;
+      border-radius: 0.25rem;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    
+    .progress-message {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--text-light);
+      white-space: pre-line;
+    }
+    
+    .router-config-section {
+      background-color: var(--card-bg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem;
+    }
+    
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 1.25rem 0;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .toggle-input {
+      display: none;
+    }
+    
+    .toggle-label {
+      position: relative;
+      display: inline-block;
+      width: 3rem;
+      height: 1.5rem;
+      background-color: #e5e7eb;
+      border-radius: 1.5rem;
+      cursor: pointer;
+      transition: background-color var(--transition-normal);
+    }
+    
+    .toggle-label::after {
+      content: '';
+      position: absolute;
+      top: 0.15rem;
+      left: 0.15rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform var(--transition-normal);
+    }
+    
+    .toggle-input:checked + .toggle-label {
+      background-color: var(--primary-color);
+    }
+    
+    .toggle-input:checked + .toggle-label::after {
+      transform: translateX(1.5rem);
+    }
+    
+    .toggle-text {
+      font-size: 0.875rem;
+      color: var(--text-light);
+    }
+    
+    .router-card {
+      background-color: rgba(0, 0, 0, 0.02);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    
+    .router-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .router-card-header h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    
+    .router-config-item {
+      display: flex;
+      margin-bottom: 0.75rem;
+    }
+    
+    .config-label {
+      width: 35%;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+    
+    .config-value {
+      flex: 1;
+      color: var(--text-light);
+      word-break: break-all;
+    }
+    
+    /* Router配置表单样式 */
+    .router-config-modal {
+      max-width: 700px;
+      width: 90%;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+    
+    .router-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .form-section {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding-bottom: 1.5rem;
+    }
+    
+    .form-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      color: var(--text-color);
+    }
+    
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .add-button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+    }
+    
+    .add-button:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .providers-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .provider-item {
+      background-color: rgba(0, 0, 0, 0.02);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      position: relative;
+    }
+    
+    .form-hint {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 0.25rem;
+    }
+    
     .theme-switch {
       margin-top: auto;
       padding: 1rem 1.5rem;
@@ -1173,6 +1551,9 @@
       <li class="menu-item active" data-page="home-page">
         <span class="icon">🏠</span> 主页
       </li>
+      <li class="menu-item" data-page="router-page">
+        <span class="icon">🔄</span> Claude Router
+      </li>
       <li class="menu-item" data-page="settings-page">
         <span class="icon">⚙️</span> 设置
       </li>
@@ -1196,6 +1577,98 @@
           <span class="icon">➕</span>
           <div class="button-name">添加配置</div>
         </button>
+      </div>
+    </div>
+    
+    <!-- Router页面 -->
+    <div class="page router-page" id="router-page">
+      <h2 class="page-title">Claude Code Router</h2>
+      
+      <!-- Router状态和控制 -->
+      <div class="router-status-card">
+        <div class="router-status-header">
+          <div class="router-status-title">
+            <h3>Router状态</h3>
+            <span id="router-status-badge" class="status-badge not-installed">未安装</span>
+          </div>
+          <button id="router-refresh-btn" class="icon-button" title="刷新状态">
+            <span class="icon">🔄</span>
+          </button>
+        </div>
+        
+        <!-- 未安装时显示 -->
+        <div id="router-not-installed" class="router-info-section">
+          <p class="router-description">
+            Claude Code Router 可以让您使用其他模型提供商（如 OpenRouter, DeepSeek, Ollama 等）来代替 Anthropic API，提供更灵活的模型选择和更多功能。
+          </p>
+          <button id="install-router-btn" class="primary-button">
+            安装 Claude Code Router
+          </button>
+          
+          <!-- 安装进度 -->
+          <div id="router-install-progress-container" class="progress-container hidden">
+            <div class="progress-status">
+              <span id="router-install-status">安装中...</span>
+              <span id="router-install-percentage">0%</span>
+            </div>
+            <div class="progress-bar">
+              <div id="router-install-progress" class="progress-fill"></div>
+            </div>
+            <p id="router-install-message" class="progress-message"></p>
+          </div>
+        </div>
+        
+        <!-- 已安装时显示 -->
+        <div id="router-installed" class="router-info-section hidden">
+          <div class="router-controls">
+            <button id="start-router-btn" class="success-button">启动路由</button>
+            <button id="stop-router-btn" class="danger-button">停止路由</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Router配置 -->
+      <div id="router-config-section" class="router-config-section hidden">
+        <h3 class="section-title">路由器配置</h3>
+        
+        <div class="form-group">
+          <label for="router-enable">启用路由功能</label>
+          <div class="toggle-container">
+            <input type="checkbox" id="router-enable" class="toggle-input">
+            <label for="router-enable" class="toggle-label"></label>
+            <span class="toggle-text">启用后，Claude请求将通过路由器发送，可使用更多模型和功能</span>
+          </div>
+        </div>
+        
+        <div class="router-card">
+          <div class="router-card-header">
+            <h4>当前路由配置</h4>
+            <button id="edit-router-config-btn" class="secondary-button">编辑配置</button>
+          </div>
+          
+          <div class="router-card-content">
+            <div class="router-config-item">
+              <span class="config-label">默认模型:</span>
+              <span id="router-default-model" class="config-value">-</span>
+            </div>
+            <div class="router-config-item">
+              <span class="config-label">思考模型:</span>
+              <span id="router-think-model" class="config-value">-</span>
+            </div>
+            <div class="router-config-item">
+              <span class="config-label">长上下文模型:</span>
+              <span id="router-longcontext-model" class="config-value">-</span>
+            </div>
+            <div class="router-config-item">
+              <span class="config-label">上下文阈值:</span>
+              <span id="router-context-threshold" class="config-value">60,000 tokens</span>
+            </div>
+            <div class="router-config-item">
+              <span class="config-label">提供商:</span>
+              <span id="router-providers" class="config-value">-</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     
@@ -1280,8 +1753,84 @@
       </div>
     </div>
   </div>
+  
+  <!-- Router配置编辑对话框 -->
+  <div class="modal-overlay" id="router-config-modal">
+    <div class="modal-content router-config-modal">
+      <div class="modal-header">
+        <h3>编辑Router配置</h3>
+        <button class="modal-close" id="close-router-modal">&times;</button>
+      </div>
+      
+      <form id="router-config-form" class="router-form">
+        <!-- 基本配置 -->
+        <div class="form-section">
+          <h4 class="section-subtitle">基本配置</h4>
+          
+          <div class="form-group">
+            <label for="router-proxy-url">代理地址 (可选)</label>
+            <input type="text" id="router-proxy-url" placeholder="http://127.0.0.1:7890">
+            <p class="form-hint">如需通过代理访问API，请在此设置代理地址</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="router-host">主机绑定地址</label>
+            <input type="text" id="router-host" value="127.0.0.1">
+            <p class="form-hint">默认为127.0.0.1，仅允许本地访问，设为0.0.0.0可允许局域网访问</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="router-timeout">API超时时间 (毫秒)</label>
+            <input type="number" id="router-timeout" value="600000">
+          </div>
+        </div>
+        
+        <!-- 提供商配置 -->
+        <div class="form-section">
+          <div class="section-header">
+            <h4 class="section-subtitle">提供商配置</h4>
+            <button type="button" id="add-provider-btn" class="add-button">添加提供商</button>
+          </div>
+          
+          <div id="providers-container" class="providers-list">
+            <!-- 提供商项将动态生成 -->
+          </div>
+        </div>
+        
+        <!-- 路由规则配置 -->
+        <div class="form-section">
+          <h4 class="section-subtitle">路由规则</h4>
+          
+          <div class="form-group">
+            <label for="router-default">默认模型</label>
+            <input type="text" id="router-default" placeholder="openrouter,anthropic/claude-3-5-sonnet">
+            <p class="form-hint">格式: 提供商,模型名称</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="router-think">思考模型 (可选)</label>
+            <input type="text" id="router-think" placeholder="openrouter,anthropic/claude-3-7-sonnet:thinking">
+          </div>
+          
+          <div class="form-group">
+            <label for="router-longcontext">长上下文模型 (可选)</label>
+            <input type="text" id="router-longcontext" placeholder="openrouter,google/gemini-2.5-pro-preview">
+          </div>
+          
+          <div class="form-group">
+            <label for="router-longcontext-threshold">长上下文阈值 (tokens)</label>
+            <input type="number" id="router-longcontext-threshold" value="60000">
+          </div>
+        </div>
+        
+        <div class="modal-actions">
+          <button type="button" id="reset-router-config-btn" class="cancel-btn">重置</button>
+          <button type="submit" id="save-router-config-btn" class="save-btn">保存配置</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-  <!-- 引入外部JavaScript文件 -->
   <script src="renderer/script.js"></script>
 </body>
 </html> 

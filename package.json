@@ -64,6 +64,7 @@
     "wait-on": "^7.2.0"
   },
   "dependencies": {
+    "@musistudio/claude-code-router": "^1.1.0",
     "electron-is-dev": "^2.0.0",
     "electron-store": "^8.1.0",
     "react": "^18.2.0",
